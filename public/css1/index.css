@@ -1,0 +1,345 @@
+/* Global reset for margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+
+  .logo img{
+    height: 30px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black; /* Add your desired text color */
+    margin-right: 20px;
+  }
+  
+  .cartcontainer {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .item-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .userInfo {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  .loginRegBtn{
+    display: none;
+    align-items: center;
+  }
+
+  .loginBtn {
+    margin-right: 10px; 
+  }
+
+/* Slideshow start here */
+
+.slideshow-container {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 60px;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 250px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.radio-labels {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+label {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #333;
+}
+
+/* Add this new style for active radio button */
+label.active {
+    background-color: blue;
+}
+
+/*SlideShow end here */
+/* Product container styles */
+.product-container {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Product link styles */
+a.product-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Product card styles */
+.product-card {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Product image styles */
+.product-card img {
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Product price styles */
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Cart overlay styles */
+.cart-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show cart overlay */
+.cart-overlay.show {
+  display: flex;
+}
+
+/* Cart styles */
+.cart {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  width: 30%;
+  min-width: 300px;
+}
+
+/* Cart heading styles */
+.cart h2 {
+  margin-bottom: 10px;
+}
+
+/* Close icon styles */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close-icon img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Cart items container styles */
+.cart-items-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Cart items list styles */
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Cart item styles */
+.cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Cart item description span styles */
+.cart-items li span {
+  flex: 1;
+}
+
+/* Cart item quantity controls styles */
+.cart-items li .quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart item quantity control button styles */
+.cart-items li .quantity-controls button {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Remove cart item button styles */
+.cart-items li .remove-item {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Add to cart button styles */
+button.add-to-cart {
+  background-color: #5cbc5c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Buy now button styles */
+button.buy-now {
+  background-color: #621ba0;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Login icon button styles */
+button.loginBtn {
+  background-color: #256925;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Register icon button styles */
+button.registerBtn {
+  background-color: #621ba0;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Total price styles */
+.total-price {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Checkout button styles */
+.checkout {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Cart button styles */
+.cart button {
+  border-radius: 20px;
+}
