@@ -19,7 +19,10 @@
                 <label for="category_name">Category Name:</label>
                 <input type="text" class="form-control" id="category_name" name="category_name" value="{{ $category->category_name }}" required>
             </div>
-            
+            <div class="form-group">
+                <label for="category_url">Category URL:</label>
+                <input type="text" class="form-control" id="category_url" name="category_url" value="{{ $category->category_url }}" required>
+            </div>          
             <div class="form-group">
                 <label for="category_img">Category Image:</label>
                 <input type="file" class="form-control" id="category_img" name="category_img">

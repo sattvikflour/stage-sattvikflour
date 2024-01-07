@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('display_order')->nullable();
             $table->string('category_name');
+            $table->string('category_url');
             $table->string('category_img');
             $table->enum('avail_status', ['available', 'unavailable','comming_soon']);
             $table->timestamps();

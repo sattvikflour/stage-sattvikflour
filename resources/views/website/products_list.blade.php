@@ -28,6 +28,19 @@
   <link href="{{ asset('public/css/style.css') }}" rel="stylesheet" />
   <!-- responsive style -->
   <link href="{{ asset('public/css/responsive.css') }}"rel="stylesheet" />
+  <style>
+    /* Custom CSS for rectangle buttons with curved corners and hover effect */
+.btn-rectangles {
+    border-radius: 20px; /* Adjust the border-radius for curved corners */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-rectangles:hover {
+    transform: scale(1.05);
+    background-color: #4caf50; /* Change the background color on hover */
+    color: #ffffff; /* Change the text color on hover */
+}
+  </style>
 </head>
 
 <body>
@@ -80,191 +93,54 @@
         </nav>
       </div>
     </header>
+   </div>
     <!-- end header section -->
     <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                          Sattvik Flour
-                        </h1>
-                        <h2>
-                          The Key To Your Health.
-                        </h2>
-                        <div class="">
-                          <a href="">
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="img-box">
-                      <img src="assets/images/slider-img.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                            Sattvik Flour
-                          </h1>
-                          <h2>
-                            The Key To Your Health.
-                          </h2>
-                        <div class="">
-                          <a href="">
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="img-box">
-                      <img src="assets/images/slider-img.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                            Sattvik Flour
-                          </h1>
-                          <h2>
-                            The Key To Your Health.
-                          </h2>
-                        <div class="">
-                          <a href="">
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="img-box">
-                      <img src="assets/images/slider-img.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                            Sattvik Flour
-                          </h1>
-                          <h2>
-                            The Key To Your Health.
-                          </h2>
-                        <div class="">
-                          <a href="">
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="img-box">
-                      <img src="assets/images/slider-img.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                            Sattvik Flour
-                          </h1>
-                          <h2>
-                            The Key To Your Health.
-                          </h2>
-                        <div class="">
-                          <a href="">
-                            Get Started
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="img-box">
-                      <img src="assets/images/slider-img.svg" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- end slider section -->
-  </div>
   @php 
-  //dd($categories) 
+  //dd($products) 
   @endphp
   <div class="row mt-4 mb-4 mx-4">
-    @foreach($categories as $category)
+    {{-- @foreach($products as $product)
         <div class="col-md-4 mb-4">
-          <div class="card">
-          <a href="{{ route('category_url',['category_url' => $category->category_url]) }}">
-                <img src="{{ asset('public/assets/images/' . $category->category_img)}}" class="card-img-top" alt="{{ $category->category_name }}">
+            <div class="card">
+              <a href="{{route("prod_id",["prod_id"=>$product->id])}}">
+                <img src="{{ asset('public/assets/images/' . $product->prod_img)}}" class="card-img-top" alt="{{ $product->prod_name }}">
               </a>
                 <div class="card-body">
-                    <h5 class="card-title">{{ $category->category_name }}</h5>
-                    {{-- <p class="card-text">{{ $category->product_price }}</p> --}}
-                    <a href="#" class="btn btn-primary btn-block">Order Now</a>
+                    <h5 class="card-title">{{ $product->prod_name }}</h5>
+                    <a href="{{route("prod_id",["prod_id"=>$product->id])}}" class="btn btn-primary btn-block">Order Now</a>
                 </div>
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
+    @foreach($products as $product)
+    <div class="col-md-4 mb-4">
+        <div class="card position-relative">
+            @if($product->prod_badge_status == 1)
+                <span class="badge badge-primary badge-top-right">{{ $product->prod_badge_text }}</span>
+            @endif
+            <a href="{{ route('prod_id', ['prod_id' => $product->id]) }}">
+                <img src="{{ asset('public/assets/images/' . $product->prod_img) }}" class="card-img-top" alt="{{ $product->prod_name }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ $product->prod_name }}</h5>
+                @if($product->prod_offer_status == 1)
+                    <p class="card-text"><b>
+                      Rs. {{ $product->prod_offer_price }}</b>
+                        <del>Rs. {{ $product->prod_original_price }}</del>
+                    </p>
+                @else
+                    <p class="card-text text-center"><b>Rs. {{ $product->prod_original_price }}</b></p>
+                @endif
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-success btn-rectangle">Add to Cart</button>
+                  <button href="{{ route('prod_id', ['prod_id' => $product->id]) }}" class="btn btn-primary btn-rectangle">Order Now</button>
+              </div>
+            </div>
+        </div>
+    </div>
+@endforeach
 </div>
 
   <!-- app section -->

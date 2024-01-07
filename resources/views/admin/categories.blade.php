@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/draggable1.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/responsive.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/draggable1.css') }}">
 
         {{-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> --}}
 
@@ -120,6 +120,6 @@
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="{{ asset('js/draggable.js') }}"></script>
+<script src="{{ asset('public/js/draggable.js') }}"></script>
 </body>
 </html>
