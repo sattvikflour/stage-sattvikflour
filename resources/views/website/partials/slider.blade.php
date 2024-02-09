@@ -1,4 +1,4 @@
-<section class=" slider_section position-relative hero_area" id="slider_section" style="background-image: url('{{ asset('assets/images/hero-bg.png') }}');">
+<section class=" slider_section position-relative hero_area" id="slider_section" style="background-image: url('{{ asset('public/assets/images/hero-bg.png') }}');">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
