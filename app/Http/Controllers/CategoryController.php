@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class CategoryController extends Controller
 {
     public function index()
-    {
+    { 
         $categories = Category::all();
         return view('admin.categories', compact('categories'));
     }

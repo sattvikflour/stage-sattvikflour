@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[CommonController::class,'index'])->name('index');
-Route::get('/{category_url}',[CommonController::class,'productList'])->name('category_url');
+Route::get('/category/{category_url}',[CommonController::class,'productList'])->name('category_url');
 Route::get('/product/{prod_id}',[CommonController::class,'productDetails'])->name('prod_id');
 
 Route::get('/register', [RegisterController::class, 'registrationForm'])->name('register');
@@ -47,3 +50,8 @@ Route::post('/product/store',[ProductController::class,'store'])->name('product.
 
 Route::get('/product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
 Route::post('/product/update/{id}',[ProductController::class,'update'])->name('product.update');
+
+Route::post('/add-to-cart', [CartController::class,'addToCart']);
+Route::get('/practice', [PracticeController::class,'viewPractice']);
+
+Route::get('/checkout',[CheckoutController::class,'checkout'])->name('checkout');

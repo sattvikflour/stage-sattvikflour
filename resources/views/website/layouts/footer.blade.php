@@ -1,5 +1,5 @@
-<div class="info_section layout_padding">
-{{-- <section class="info_section layout_padding"> --}}
+  <!-- info section -->
+  <section class="info_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -7,7 +7,7 @@
             <div class="info_logo">
               <a href="index.html">
                 <span>
-                  Cryptop
+                  Sattvik Flour
                 </span>
               </a>
             </div>
@@ -16,26 +16,26 @@
             </h5>
             <div>
               <div class="img-box">
-                <img src="images/location.png" width="18px" alt="" />
+                <img src="{{ asset('public/assets/icons/location.png') }}" width="18px" alt="" />
               </div>
               <p>
-                Page when looking at its layou
+                Dighi, Pune
               </p>
             </div>
             <div>
               <div class="img-box">
-                <img src="images/phone.png" width="18px" alt="" />
+                <img src="{{ asset('public/assets/icons/phone.png') }}" width="18px" alt="" />
               </div>
               <p>
-                +01 1234567890
+                +91 9175113022
               </p>
             </div>
             <div>
               <div class="img-box">
-                <img src="images/envelope.png" width="18px" alt="" />
+                <img src="{{ asset('public/assets/icons/envelope.png') }}" width="18px" alt="" />
               </div>
               <p>
-                demo@gmail.com
+                care@sattvik.com
               </p>
             </div>
           </div>
@@ -43,11 +43,10 @@
         <div class="col-md-3">
           <div class="info_info">
             <h5>
-              Invest Money
+              Address
             </h5>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour,
+           Shop No. 123,  Abcd Nagar, Pune , 400111
             </p>
           </div>
         </div>
@@ -60,37 +59,22 @@
             <ul>
               <li>
                 <a href="">
-                  There are many
+                  Link 1
                 </a>
               </li>
               <li>
                 <a href="">
-                  variations of
+                  Link 2
                 </a>
               </li>
               <li>
                 <a href="">
-                  passages of
+                  Link 3
                 </a>
               </li>
               <li>
                 <a href="">
-                  Lorem Ipsum
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  available, but the
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  majority have
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  suffered
+                  Link 4
                 </a>
               </li>
             </ul>
@@ -111,10 +95,49 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid footer_section">    
-        <p>
-        &copy; 2019 All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p></div>
-  {{-- </section> --}}
-</div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2023 All Rights Reserved By
+      <a href="#">Abhijit Abdagire</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <!-- Scripts -->
+  <script src="{{ asset('public/js/jquery-3.7.1.js') }}"></script>
+  <script src="{{ asset('public/js/popper.min.js') }}"></script>
+  <script src="{{ asset('public/js/bootstrap.js') }}"></script>
+  <script src="{{ asset('public/js/cart.js') }}"></script>
+  <script src="{{ asset('public/js/checkout.js') }}"></script>
+  <script src="{{ asset('public/js/owl.carousel.js') }}"></script>
+  {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> --}}
+  <!-- owl carousel script -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      navText: [],
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  });
+  </script>
+  <!-- end owl carousel script -->
+</body>
+
+</html>

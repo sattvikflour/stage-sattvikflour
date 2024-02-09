@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+  
+    <title>Home-Sattvik Flour</title>
+  
+    <!-- slider stylesheet -->
+  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <!-- fonts style -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+  
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/index.css') }}"/>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.css') }}"/>
+  
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('public/css/style.css') }}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{{ asset('public/css/responsive.css') }}"rel="stylesheet" />
+    <link href="{{ asset('public/css/cart.css') }}"rel="stylesheet" />
+    <link href="{{ asset('public/css/checkout.css') }}"rel="stylesheet" />
+  </head>
 <body>
     <div id="registerForm" class="reg">
         <div class=regcontainer>
