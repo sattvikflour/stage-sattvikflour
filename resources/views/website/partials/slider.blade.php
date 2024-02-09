@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.svg" alt="" />
+                    <img src="{{ asset('public/assets/images/slider-img.svg') }}" alt="" />
                   </div>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.svg" alt="" />
+                    <img src="{{ asset('public/assets/images/slider-img.svg') }}" alt="" />
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.svg" alt="" />
+                    <img src="{{ asset('public/assets/images/slider-img.svg') }}" alt="" />
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.svg" alt="" />
+                    <img src="{{ asset('public/assets/images/slider-img.svg') }}" alt="" />
                   </div>
                 </div>
               </div>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.svg" alt="" />
+                    <img src="{{ asset('public/assets/images/slider-img.svg') }}" alt="" />
                   </div>
                 </div>
               </div>
